@@ -24,7 +24,6 @@ public class MonthFragment extends Fragment {
 
     private View rootView;
     private ViewPager viewPager;
-    private CalendarAdapter calendarAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +38,7 @@ public class MonthFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
         viewPager = view.findViewById(R.id.viewpager);
-        viewPager.setAdapter(calendarAdapter);
+        viewPager.setAdapter(new CalendarAdapter());
     }
 
 
@@ -57,24 +56,29 @@ public class MonthFragment extends Fragment {
 
         @Override
         public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+            System.out.println(object == view);
+
             return object == view;
         }
 
+
+
+        @NonNull
         @Override
-        public Object instantiateItem(ViewGroup container, int position){
+        public Object instantiateItem(@NonNull ViewGroup container, int position){
 
             View view = getActivity().getLayoutInflater()
                     .inflate(R.layout.monthpager_item, container, false);
 
             container.addView(view);
-
+            Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
 
         }
 
         public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object){
             container.removeView((View) object);
-            Log.i(LOG_TAG, "destroyItem() [position: " + position + "]");
+            Log.d(LOG_TAG, "destroyItem() [position: " + position + "]");
         }
     }
 

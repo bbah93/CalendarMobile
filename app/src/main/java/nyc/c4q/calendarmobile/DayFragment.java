@@ -12,6 +12,7 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  */
 public class DayFragment extends Fragment {
+    View rootView;
 
 
     public DayFragment() {
@@ -22,8 +23,10 @@ public class DayFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_day, container, false);
+
+        rootView = inflater.inflate(R.layout.fragment_day, container, false);
+
+        return rootView;
     }
 
 }
