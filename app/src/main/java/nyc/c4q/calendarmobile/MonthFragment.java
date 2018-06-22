@@ -3,6 +3,7 @@ package nyc.c4q.calendarmobile;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -10,12 +11,24 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Calendar;
+
+import static android.content.ContentValues.TAG;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MonthFragment extends Fragment {
+    TextView monthText;
+    TextView yearText;
+    TextView dayText;
+    FloatingActionButton setAppointmentButton;
+    MonthPresenter presenter;
+
+
 
 
     public MonthFragment() {
@@ -39,6 +52,8 @@ public class MonthFragment extends Fragment {
 
         viewPager = view.findViewById(R.id.viewpager);
         viewPager.setAdapter(new CalendarAdapter());
+
+//
     }
 
 
@@ -62,7 +77,6 @@ public class MonthFragment extends Fragment {
         }
 
 
-
         @NonNull
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position){
@@ -70,10 +84,34 @@ public class MonthFragment extends Fragment {
             View view = getActivity().getLayoutInflater()
                     .inflate(R.layout.monthpager_item, container, false);
 
+            Calendar calendar = Calendar.getInstance();
+             int year = calendar.get(Calendar.YEAR);
+             Log.d(TAG, "year: " + year);
+
+
             container.addView(view);
+
+            monthText = view.findViewById(R.id.month_textView);
+            yearText = view.findViewById(R.id.year_textView);
+
+            dayText = view.findViewById(R.id.r1columnOne);
+
+            //TODO: Set Up presenter logic for this fragment
+            dayText.setText(String.valueOf(position));
+            monthText.setText(presenter.getMonth(position));
+            yearText.setText(String.valueOf(year));
+
+            //sey up logic for days on view of calendars
+
+
             Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
 
+        }
+
+        @Override
+        public int getItemPosition(@NonNull Object object) {
+            return super.getItemPosition(object);
         }
 
         public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object){

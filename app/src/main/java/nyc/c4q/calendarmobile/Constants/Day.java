@@ -13,9 +13,5 @@ public class Day {
     public static final int FRI = 6;
     public static final int SAT = 7;
 
-//    public static void main(String[] args) {
-//        Calendar calendar = Calendar.getInstance();
-//
-//    }
   }
 
