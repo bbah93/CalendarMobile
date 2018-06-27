@@ -82,7 +82,7 @@ public class MonthFragment extends Fragment {
         public Object instantiateItem(@NonNull ViewGroup container, int position){
 
             View view = getActivity().getLayoutInflater()
-                    .inflate(R.layout.monthpager_item, container, false);
+                    .inflate(R.layout.january_pager_item, container, false);
 
             Calendar calendar = Calendar.getInstance();
              int year = calendar.get(Calendar.YEAR);
