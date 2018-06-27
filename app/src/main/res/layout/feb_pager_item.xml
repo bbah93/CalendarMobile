@@ -115,6 +115,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
+            android:visibility="invisible"
             android:text="@string/one" />
 
         <TextView
@@ -123,6 +124,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
+            android:visibility="invisible"
             android:text="@string/two" />
 
         <TextView
@@ -131,6 +133,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
+            android:visibility="invisible"
             android:text="@string/three" />
 
         <TextView
@@ -139,7 +142,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/four" />
+            android:text="@string/one" />
 
         <TextView
             android:id="@+id/r1columnSix"
@@ -147,7 +150,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/five" />
+            android:text="@string/two" />
 
         <TextView
             android:id="@+id/r1columnSeven"
@@ -155,7 +158,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/six" />
+            android:text="@string/three" />
 
 
     </LinearLayout>
@@ -175,7 +178,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/seven" />
+            android:text="@string/four" />
 
         <TextView
             android:id="@+id/r2columnTwo"
@@ -183,7 +186,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/eight" />
+            android:text="@string/five" />
 
         <TextView
             android:id="@+id/r2columnThree"
@@ -191,7 +194,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/nine" />
+            android:text="@string/six" />
 
         <TextView
             android:id="@+id/r2columnFour"
@@ -199,7 +202,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/ten" />
+            android:text="@string/seven" />
 
         <TextView
             android:id="@+id/r2columnFive"
@@ -207,7 +210,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/eleven" />
+            android:text="@string/eight" />
 
         <TextView
             android:id="@+id/r2columnSix"
@@ -215,7 +218,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twelve" />
+            android:text="@string/nine" />
 
         <TextView
             android:id="@+id/r2columnSeven"
@@ -223,7 +226,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/thirteen" />
+            android:text="@string/ten" />
 
 
     </LinearLayout>
@@ -243,7 +246,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/fourteen" />
+            android:text="@string/eleven" />
 
         <TextView
             android:id="@+id/r3columnTwo"
@@ -251,7 +254,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/fifteen" />
+            android:text="@string/twelve" />
 
         <TextView
             android:id="@+id/r3columnThree"
@@ -259,7 +262,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/sixteen" />
+            android:text="@string/thirteen" />
 
         <TextView
             android:id="@+id/r3columnFour"
@@ -267,7 +270,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/seventeen" />
+            android:text="@string/fourteen" />
 
         <TextView
             android:id="@+id/r3columnFive"
@@ -275,7 +278,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/eighteen" />
+            android:text="@string/fifteen" />
 
         <TextView
             android:id="@+id/r3columnSix"
@@ -283,7 +286,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/nineTeen" />
+            android:text="@string/sixteen" />
 
         <TextView
             android:id="@+id/r3columnSeven"
@@ -291,7 +294,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twenty" />
+            android:text="@string/seventeen" />
 
 
     </LinearLayout>
@@ -311,7 +314,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyOne" />
+            android:text="@string/eighteen" />
 
         <TextView
             android:id="@+id/r4columnTwo"
@@ -319,7 +322,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyTwo" />
+            android:text="@string/nineTeen" />
 
         <TextView
             android:id="@+id/r4columnThree"
@@ -327,7 +330,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyThree" />
+            android:text="@string/twenty" />
 
         <TextView
             android:id="@+id/r4columnFour"
@@ -335,7 +338,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyFour" />
+            android:text="@string/twentyOne" />
 
         <TextView
             android:id="@+id/r4columnFive"
@@ -343,7 +346,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyFive" />
+            android:text="@string/twentyTwo" />
 
         <TextView
             android:id="@+id/r4columnSix"
@@ -351,7 +354,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentySix" />
+            android:text="@string/twentyThree" />
 
         <TextView
             android:id="@+id/r4columnSeven"
@@ -359,7 +362,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentySeven" />
+            android:text="@string/twentyFour" />
 
 
     </LinearLayout>
@@ -380,7 +383,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyEight" />
+            android:text="@string/twentyFive" />
 
         <TextView
             android:id="@+id/r5columnTwo"
@@ -388,7 +391,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/twentyNine" />
+            android:text="@string/twentySix" />
 
         <TextView
             android:id="@+id/r5columnThree"
@@ -396,7 +399,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/thirty" />
+            android:text="@string/twentySeven" />
 
         <TextView
             android:id="@+id/r5columnFour"
@@ -404,7 +407,7 @@
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/thirtyOne" />
+            android:text="@string/twentyEight" />
 
         <TextView
             android:id="@+id/r5columnFive"
