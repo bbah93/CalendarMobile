@@ -98,7 +98,7 @@ public class MonthFragment extends Fragment {
 
             //TODO: Set Up presenter logic for this fragment
             dayText.setText(String.valueOf(position));
-            monthText.setText(presenter.getMonth(position));
+            //monthText.setText(presenter.getMonth(position));
             yearText.setText(String.valueOf(year));
 
             //sey up logic for days on view of calendars

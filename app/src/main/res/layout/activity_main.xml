@@ -16,9 +16,27 @@
         android:id="@+id/setAppointment_FAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/fragment_container"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_margin="8dp"
         android:src="@drawable/ic_add"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@id/event_holder"
+        android:background="#000"/>
+    <FrameLayout
+        android:id="@+id/event_holder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container">
+
+        <TextView
+            android:id="@+id/event_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scheduled Events: 0"/>
+    </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>
