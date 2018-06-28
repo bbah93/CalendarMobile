@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -35,7 +36,7 @@
     <LinearLayout
         android:id="@+id/weekdays_span_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="7"
         app:layout_constraintTop_toBottomOf="@id/topActivityFrame">
@@ -93,7 +94,7 @@
     <LinearLayout
         android:id="@+id/rowOne"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="7"
@@ -102,7 +103,7 @@
 
         <TextView
             android:id="@+id/r1columnOne"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -111,7 +112,7 @@
 
         <TextView
             android:id="@+id/r1columnTwo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -120,7 +121,7 @@
 
         <TextView
             android:id="@+id/r1columnThree"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -128,7 +129,7 @@
 
         <TextView
             android:id="@+id/r1columnFour"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -137,7 +138,7 @@
 
         <TextView
             android:id="@+id/r1columnFive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -145,7 +146,7 @@
 
         <TextView
             android:id="@+id/r1columnSix"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -153,7 +154,7 @@
 
         <TextView
             android:id="@+id/r1columnSeven"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -173,7 +174,7 @@
 
         <TextView
             android:id="@+id/r2columnOne"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -181,7 +182,7 @@
 
         <TextView
             android:id="@+id/r2columnTwo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -189,7 +190,7 @@
 
         <TextView
             android:id="@+id/r2columnThree"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -197,7 +198,7 @@
 
         <TextView
             android:id="@+id/r2columnFour"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -205,7 +206,7 @@
 
         <TextView
             android:id="@+id/r2columnFive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -213,7 +214,7 @@
 
         <TextView
             android:id="@+id/r2columnSix"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -221,7 +222,7 @@
 
         <TextView
             android:id="@+id/r2columnSeven"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -241,7 +242,7 @@
 
         <TextView
             android:id="@+id/r3columnOne"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -249,7 +250,7 @@
 
         <TextView
             android:id="@+id/r3columnTwo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -257,7 +258,7 @@
 
         <TextView
             android:id="@+id/r3columnThree"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -265,7 +266,7 @@
 
         <TextView
             android:id="@+id/r3columnFour"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -273,7 +274,7 @@
 
         <TextView
             android:id="@+id/r3columnFive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -281,7 +282,7 @@
 
         <TextView
             android:id="@+id/r3columnSix"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -289,7 +290,7 @@
 
         <TextView
             android:id="@+id/r3columnSeven"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -309,7 +310,7 @@
 
         <TextView
             android:id="@+id/r4columnOne"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -317,7 +318,7 @@
 
         <TextView
             android:id="@+id/r4columnTwo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -325,7 +326,7 @@
 
         <TextView
             android:id="@+id/r4columnThree"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -333,7 +334,7 @@
 
         <TextView
             android:id="@+id/r4columnFour"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -341,7 +342,7 @@
 
         <TextView
             android:id="@+id/r4columnFive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -349,7 +350,7 @@
 
         <TextView
             android:id="@+id/r4columnSix"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -357,7 +358,7 @@
 
         <TextView
             android:id="@+id/r4columnSeven"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -377,7 +378,7 @@
 
         <TextView
             android:id="@+id/r5columnOne"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -385,7 +386,7 @@
 
         <TextView
             android:id="@+id/r5columnTwo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -393,7 +394,7 @@
 
         <TextView
             android:id="@+id/r5columnThree"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -401,7 +402,7 @@
 
         <TextView
             android:id="@+id/r5columnFour"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -409,7 +410,7 @@
 
         <TextView
             android:id="@+id/r5columnFive"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -418,7 +419,7 @@
 
         <TextView
             android:id="@+id/r5columnSix"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -427,7 +428,7 @@
 
         <TextView
             android:id="@+id/r5columnSeven"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dayBoxSize"
             android:layout_weight="1"
             android:gravity="center"
@@ -444,11 +445,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+
 </android.support.constraint.ConstraintLayout>
 

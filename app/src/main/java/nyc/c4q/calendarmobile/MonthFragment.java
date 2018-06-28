@@ -26,7 +26,7 @@ public class MonthFragment extends Fragment {
     TextView yearText;
     TextView dayText;
     FloatingActionButton setAppointmentButton;
-    MonthPresenter presenter;
+    MonthPresenter presenter = new MonthPresenter();
 
 
 
@@ -81,8 +81,11 @@ public class MonthFragment extends Fragment {
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position){
 
-            View view = getActivity().getLayoutInflater()
-                    .inflate(R.layout.january_pager_item, container, false);
+            View view = presenter.getMonthView(position, getActivity(), container);
+
+//            if (view != null){
+//                view = presenter.getMonthView(position, getActivity(), container);
+//            }
 
             Calendar calendar = Calendar.getInstance();
              int year = calendar.get(Calendar.YEAR);
@@ -91,14 +94,11 @@ public class MonthFragment extends Fragment {
 
             container.addView(view);
 
-            monthText = view.findViewById(R.id.month_textView);
+
             yearText = view.findViewById(R.id.year_textView);
 
             dayText = view.findViewById(R.id.r1columnOne);
 
-            //TODO: Set Up presenter logic for this fragment
-            dayText.setText(String.valueOf(position));
-            //monthText.setText(presenter.getMonth(position));
             yearText.setText(String.valueOf(year));
 
             //sey up logic for days on view of calendars

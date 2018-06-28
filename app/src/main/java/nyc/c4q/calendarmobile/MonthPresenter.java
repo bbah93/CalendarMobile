@@ -1,40 +1,45 @@
 package nyc.c4q.calendarmobile;
 
+import android.app.Activity;
+import android.view.View;
+import android.view.ViewGroup;
+
 public class MonthPresenter {
 
 
+    public View getMonthView(int itemPosition, Activity activity, ViewGroup container){
+        View monthView = null;
 
-    public String getMonth(int monthNumber){
-        String month;
-
-        switch (monthNumber){
-            case 0:  month = "Jan";
+        switch (itemPosition){
+            case 0: monthView = activity.getLayoutInflater().inflate(R.layout.january_pager_item, container,false);
+                    break;
+            case 1: monthView = activity.getLayoutInflater().inflate(R.layout.feb_pager_item, container,false);
+                    break;
+            case 2: monthView = activity.getLayoutInflater().inflate(R.layout.march_pager_item, container,false);
+                    break;
+            case 3: monthView = activity.getLayoutInflater().inflate(R.layout.april_pager_item, container,false);
+                    break;
+            case 4: monthView = activity.getLayoutInflater().inflate(R.layout.may_pager_item, container,false);
+                    break;
+            case 5: monthView = activity.getLayoutInflater().inflate(R.layout.june_pager_item, container,false);
+                    break;
+            case 6: monthView = activity.getLayoutInflater().inflate(R.layout.july_pager_item, container,false);
+                    break;
+            case 7: monthView = activity.getLayoutInflater().inflate(R.layout.august_pager_item, container,false);
+                    break;
+            case 8: monthView = activity.getLayoutInflater().inflate(R.layout.sept_pager_item, container,false);
+                    break;
+            case 9: monthView = activity.getLayoutInflater().inflate(R.layout.october_pager_item, container,false);
                 break;
-            case 1:  month = "Feb";
-                break;
-            case 2:  month = "Mar";
-                break;
-            case 3:  month = "Apr";
-                break;
-            case 4:  month = "May";
-                break;
-            case 5:  month = "Jun";
-                break;
-            case 6:  month = "Jul";
-                break;
-            case 7:  month = "Aug";
-                break;
-            case 8:  month = "Sep";
-                break;
-            case 9:  month = "Oct";
-                break;
-            case 10:  month = "Nov";
-                break;
-            case 11:  month = "Dec";
-                break;
-                default: return "Empty";
-
+            case 10: monthView = activity.getLayoutInflater().inflate(R.layout.november_pager_item, container,false);
+                    break;
+            case 11: monthView = activity.getLayoutInflater().inflate(R.layout.december_pager_item, container,false);
+                        break;
         }
-        return month;
+
+        return monthView;
     }
+
+
+
 }
