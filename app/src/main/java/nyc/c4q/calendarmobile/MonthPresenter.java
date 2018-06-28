@@ -3,6 +3,9 @@ package nyc.c4q.calendarmobile;
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 public class MonthPresenter {
 
@@ -40,6 +43,9 @@ public class MonthPresenter {
         return monthView;
     }
 
+    public void currentDayHighlight(View viewMonth, TextView dayView, Calendar calendar){
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
 
+    }
 
 }

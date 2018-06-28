@@ -22,19 +22,11 @@ import static android.content.ContentValues.TAG;
  * A simple {@link Fragment} subclass.
  */
 public class MonthFragment extends Fragment {
-    TextView monthText;
+
     TextView yearText;
     TextView dayText;
-    FloatingActionButton setAppointmentButton;
     MonthPresenter presenter = new MonthPresenter();
     Calendar calendar = Calendar.getInstance();
-
-
-
-
-    public MonthFragment() {
-        // Required empty public constructor
-    }
 
     private View rootView;
     private ViewPager viewPager;
@@ -44,6 +36,8 @@ public class MonthFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
+
+
 
         return rootView;
     }
@@ -57,9 +51,9 @@ public class MonthFragment extends Fragment {
 
     }
 
-
-
-    //inner class adapter
+    /**
+     * Inner Class Calendar Adapter for MonthFragment
+     */
     public class CalendarAdapter extends PagerAdapter {
 
 
@@ -84,26 +78,17 @@ public class MonthFragment extends Fragment {
 
             View view = presenter.getMonthView(position, getActivity(), container);
 
-
              int year = calendar.get(Calendar.YEAR);
              Log.d(TAG, "MONTH: " + year);
 
-
             container.addView(view);
 
-
             yearText = view.findViewById(R.id.year_textView);
-
             dayText = view.findViewById(R.id.r1columnOne);
-
             yearText.setText(String.valueOf(year));
-
-            //sey up logic for days on view of calendars
-
 
             Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
-
         }
 
         @Override
