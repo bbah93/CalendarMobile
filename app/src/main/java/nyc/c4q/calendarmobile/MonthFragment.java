@@ -27,6 +27,7 @@ public class MonthFragment extends Fragment {
     TextView dayText;
     FloatingActionButton setAppointmentButton;
     MonthPresenter presenter = new MonthPresenter();
+    Calendar calendar = Calendar.getInstance();
 
 
 
@@ -52,8 +53,8 @@ public class MonthFragment extends Fragment {
 
         viewPager = view.findViewById(R.id.viewpager);
         viewPager.setAdapter(new CalendarAdapter());
+        viewPager.setCurrentItem(calendar.get(Calendar.MONTH));
 
-//
     }
 
 
@@ -83,13 +84,9 @@ public class MonthFragment extends Fragment {
 
             View view = presenter.getMonthView(position, getActivity(), container);
 
-//            if (view != null){
-//                view = presenter.getMonthView(position, getActivity(), container);
-//            }
 
-            Calendar calendar = Calendar.getInstance();
              int year = calendar.get(Calendar.YEAR);
-             Log.d(TAG, "year: " + year);
+             Log.d(TAG, "MONTH: " + year);
 
 
             container.addView(view);
