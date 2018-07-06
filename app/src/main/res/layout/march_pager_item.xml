@@ -2,11 +2,12 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintVertical_weight="5">
 
-    <FrameLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/topActivityFrame"
         android:layout_width="match_parent"
         android:layout_height="80dp">
@@ -15,153 +16,209 @@
             android:id="@+id/month_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="41dp"
             android:layout_marginTop="10dp"
             android:text="@string/march"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/year_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_gravity="bottom"
-            android:background="@color/colorGreen" />
-    </FrameLayout>
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month_textView" />
 
-    <LinearLayout
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/colorGreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month_textView" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/weekdays_span_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:weightSum="7"
         app:layout_constraintTop_toBottomOf="@id/topActivityFrame">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Sun"/>
+            android:text="@string/Sun"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+            app:layout_constraintEnd_toStartOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Mon"/>
+            android:text="@string/Mon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView17"
+            app:layout_constraintStart_toEndOf="@+id/textView15" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView17"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Tue"/>
+            android:text="@string/Tue"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+            app:layout_constraintEnd_toStartOf="@+id/textView18"
+            app:layout_constraintStart_toEndOf="@+id/textView16" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Wed"/>
+            android:text="@string/Wed"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
+            app:layout_constraintEnd_toStartOf="@+id/textView19"
+            app:layout_constraintStart_toEndOf="@+id/textView17" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView19"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Thu"/>
+            android:text="@string/Thu"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
+            app:layout_constraintEnd_toStartOf="@+id/textView20"
+            app:layout_constraintStart_toEndOf="@+id/textView18" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView20"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Fri"/>
+            android:text="@string/Fri"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+            app:layout_constraintEnd_toStartOf="@+id/textView21"
+            app:layout_constraintStart_toEndOf="@+id/textView19" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView21"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/Sat"/>
-    </LinearLayout>
+            android:text="@string/Sat"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView20" />
+    </android.support.constraint.ConstraintLayout>
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/rowOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
         android:weightSum="7"
         app:layout_constraintBottom_toTopOf="@+id/rowTwo"
         app:layout_constraintTop_toTopOf="@id/weekdays_span_view">
 
         <TextView
             android:id="@+id/r1columnOne"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/numberHolder"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="@string/one"
             android:visibility="invisible"
-            android:text="@string/one" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnThree"
+            app:layout_constraintStart_toEndOf="@+id/r1columnOne"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnThree"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
             android:gravity="center"
+            android:text="@string/two"
             android:visibility="invisible"
-            android:text="@string/two" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnFour"
+            app:layout_constraintStart_toEndOf="@+id/r1columnTwo"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnFour"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="@string/three"
             android:visibility="invisible"
-            android:text="@string/three" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnFive"
+            app:layout_constraintStart_toEndOf="@+id/r1columnThree"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnFive"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/one" />
+            android:text="@string/one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnSix"
+            app:layout_constraintStart_toEndOf="@+id/r1columnFour"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnSix"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
             android:gravity="center"
-            android:text="@string/two" />
+            android:text="@string/two"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/r1columnSeven"
+            app:layout_constraintStart_toEndOf="@+id/r1columnFive"
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/r1columnSeven"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dayBoxSize"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/three" />
+            android:text="@string/three"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/r1columnSix"
+            app:layout_constraintTop_toBottomOf="parent" />
 
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/rowTwo"

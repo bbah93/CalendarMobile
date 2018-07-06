@@ -1,8 +1,10 @@
 package nyc.c4q.calendarmobile;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -45,7 +47,34 @@ public class MonthPresenter {
 
     public void currentDayHighlight(View viewMonth, TextView dayView, Calendar calendar){
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+        int currentMonth = calendar.get(Calendar.MONTH);
+
+        ViewGroup rowOne = viewMonth.findViewById(R.id.rowOne);
+        ViewGroup rowTwo = viewMonth.findViewById(R.id.rowTwo);
+        ViewGroup rowThree = viewMonth.findViewById(R.id.rowThree);
+        ViewGroup rowFour = viewMonth.findViewById(R.id.rowFour);
+        ViewGroup rowFive = viewMonth.findViewById(R.id.rowFive);
+
+
+
+        ViewGroup[] layoutArray = {rowOne, rowTwo, rowThree, rowFour, rowFive};
+
+        for (int i = 0; i < layoutArray.length; i++){
+            for (int j = 0; j < layoutArray[i].getChildCount(); j++){
+
+                dayView = (TextView)layoutArray[i].getChildAt(j);
+                String dayText = ((TextView)layoutArray[i].getChildAt(j)).getText().toString();
+
+                if(!dayText.equals("#") && !dayText.isEmpty()){
+                    if(Integer.parseInt(dayText) == currentDay){
+                        dayView.setBackgroundColor(Color.parseColor("#1db954"));
+                        break;
+                }
+              }
+            }
+        }
 
     }
+
 
 }

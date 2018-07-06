@@ -27,6 +27,7 @@ public class MonthFragment extends Fragment {
     TextView dayText;
     MonthPresenter presenter = new MonthPresenter();
     Calendar calendar = Calendar.getInstance();
+    TextView dayView;
 
     private View rootView;
     private ViewPager viewPager;
@@ -34,11 +35,7 @@ public class MonthFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
-
-
-
         return rootView;
     }
 
@@ -48,14 +45,11 @@ public class MonthFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewpager);
         viewPager.setAdapter(new CalendarAdapter());
         viewPager.setCurrentItem(calendar.get(Calendar.MONTH));
-
     }
-
     /**
      * Inner Class Calendar Adapter for MonthFragment
      */
     public class CalendarAdapter extends PagerAdapter {
-
 
         private static final String LOG_TAG = "ITEM: " ;
 
@@ -67,26 +61,29 @@ public class MonthFragment extends Fragment {
         @Override
         public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
             System.out.println(object == view);
-
             return object == view;
         }
-
 
         @NonNull
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position){
 
             View view = presenter.getMonthView(position, getActivity(), container);
+            container.addView(view);
 
              int year = calendar.get(Calendar.YEAR);
-             Log.d(TAG, "MONTH: " + year);
+             int month = calendar.get(Calendar.MONTH);
+             Log.d(TAG, "YEAR: " + year);
 
-            container.addView(view);
+
 
             yearText = view.findViewById(R.id.year_textView);
             dayText = view.findViewById(R.id.r1columnOne);
             yearText.setText(String.valueOf(year));
 
+            if(position == month){
+                presenter.currentDayHighlight(view, dayView, calendar);
+            }
             Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
         }
