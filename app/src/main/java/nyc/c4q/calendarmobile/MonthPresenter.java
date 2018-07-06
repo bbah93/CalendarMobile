@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -45,9 +44,8 @@ public class MonthPresenter {
         return monthView;
     }
 
-    public void currentDayHighlight(View viewMonth, TextView dayView, Calendar calendar){
+    public void currentDayHighlight(View viewMonth, Calendar calendar){
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-        int currentMonth = calendar.get(Calendar.MONTH);
 
         ViewGroup rowOne = viewMonth.findViewById(R.id.rowOne);
         ViewGroup rowTwo = viewMonth.findViewById(R.id.rowTwo);
@@ -62,7 +60,7 @@ public class MonthPresenter {
         for (int i = 0; i < layoutArray.length; i++){
             for (int j = 0; j < layoutArray[i].getChildCount(); j++){
 
-                dayView = (TextView)layoutArray[i].getChildAt(j);
+                TextView dayView = (TextView) layoutArray[i].getChildAt(j);
                 String dayText = ((TextView)layoutArray[i].getChildAt(j)).getText().toString();
 
                 if(!dayText.equals("#") && !dayText.isEmpty()){
@@ -73,8 +71,14 @@ public class MonthPresenter {
               }
             }
         }
-
     }
 
+    public void setUpTextViewListener(final TextView dayView){
+        dayView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+    }
 }

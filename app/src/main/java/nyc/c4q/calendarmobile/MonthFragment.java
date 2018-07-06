@@ -3,7 +3,6 @@ package nyc.c4q.calendarmobile;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -27,22 +26,18 @@ public class MonthFragment extends Fragment {
     TextView dayText;
     MonthPresenter presenter = new MonthPresenter();
     Calendar calendar = Calendar.getInstance();
-    TextView dayView;
-
-    private View rootView;
-    private ViewPager viewPager;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_calendar, container, false);
+
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
-        viewPager = view.findViewById(R.id.viewpager);
+        ViewPager viewPager = view.findViewById(R.id.viewpager);
         viewPager.setAdapter(new CalendarAdapter());
         viewPager.setCurrentItem(calendar.get(Calendar.MONTH));
     }
@@ -75,15 +70,14 @@ public class MonthFragment extends Fragment {
              int month = calendar.get(Calendar.MONTH);
              Log.d(TAG, "YEAR: " + year);
 
-
-
             yearText = view.findViewById(R.id.year_textView);
-            dayText = view.findViewById(R.id.r1columnOne);
             yearText.setText(String.valueOf(year));
 
             if(position == month){
-                presenter.currentDayHighlight(view, dayView, calendar);
+                presenter.currentDayHighlight(view, calendar);
             }
+
+
             Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
         }
