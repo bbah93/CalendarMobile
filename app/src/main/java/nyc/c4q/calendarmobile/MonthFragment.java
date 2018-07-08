@@ -66,6 +66,7 @@ public class MonthFragment extends Fragment {
             View view = presenter.getMonthView(position, getActivity(), container);
             container.addView(view);
 
+
              int year = calendar.get(Calendar.YEAR);
              int month = calendar.get(Calendar.MONTH);
              Log.d(TAG, "YEAR: " + year);
@@ -76,7 +77,8 @@ public class MonthFragment extends Fragment {
             if(position == month){
                 presenter.currentDayHighlight(view, calendar);
             }
-
+            //presenter.dayViewListener(view, getActivity());
+            //TODO: Set up onClickListener for individual dates
 
             Log.d(LOG_TAG, "instantiateItem() [position: " + position + "]");
             return view;
@@ -92,5 +94,4 @@ public class MonthFragment extends Fragment {
             Log.d(LOG_TAG, "destroyItem() [position: " + position + "]");
         }
     }
-
 }

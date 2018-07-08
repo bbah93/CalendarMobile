@@ -2,6 +2,8 @@ package nyc.c4q.calendarmobile;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -10,6 +12,7 @@ import java.util.Calendar;
 
 public class MonthPresenter {
 
+    MonthFragment monthFragment;
 
     public View getMonthView(int itemPosition, Activity activity, ViewGroup container){
         View monthView = null;
@@ -73,11 +76,18 @@ public class MonthPresenter {
         }
     }
 
-    public void setUpTextViewListener(final TextView dayView){
-        dayView.setOnClickListener(new View.OnClickListener() {
+    public void dayViewListener(View day, final FragmentActivity fragActivity){
+
+        //TODO: Set up clicklistener logic to see individual days
+        day.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EventFragment eventFragment = new EventFragment();
 
+                FragmentTransaction transaction = fragActivity.getSupportFragmentManager().beginTransaction();
+                transaction.hide(monthFragment);
+                transaction.show(eventFragment);
+                transaction.commit();
             }
         });
     }

@@ -7,6 +7,7 @@ public class RetrofitInstance {
 
     private static String lastFM_API_KEY = "262a806e8dcfd901633ea70e676cca0f";
     private static String lastFM_Shared_Secret = "fb9d0c0971f41181670e14e913b5d268";
+
     private static String baseURL = "http://ws.audioscrobbler.com/";
     public static RetrofitInstance retrofitInstance;
 

@@ -11,20 +11,20 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DayFragment extends Fragment {
+public class EventFragment extends Fragment {
     View rootView;
 
-
-    public DayFragment() {
+    public EventFragment() {
         // Required empty public constructor
     }
 
-
+    //TODO: Add functions for Cancel and Submit
+    //TODO: Add button to set date(day)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.fragment_day, container, false);
+        rootView = inflater.inflate(R.layout.event, container, false);
 
         return rootView;
     }
